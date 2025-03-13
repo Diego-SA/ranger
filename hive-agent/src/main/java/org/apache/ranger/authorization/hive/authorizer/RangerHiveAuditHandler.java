@@ -355,7 +355,7 @@ public class RangerHiveAuditHandler extends RangerDefaultAuditHandler {
 		if (val instanceof List<?>) {
 			List<String> resourcePathVal = (List<String>) val;
 
-			if (CollectionUtils.isNotEmpty(resourcePathVal)) {
+			if (CollectionUtils.size(resourcePathVal) > 0) {
 				ret = resourcePathVal.iterator().next();
 			}
 		}

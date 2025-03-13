@@ -359,6 +359,10 @@
                     <groupId>*</groupId>
                     <artifactId>reload4j</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.apache.kerby</groupId>
+                    <artifactId>kerb-admin</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
