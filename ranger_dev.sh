@@ -36,7 +36,8 @@ export RANGER_DB_TYPE=postgres
 
 # export RANGER_DB_TYPE=postgres
 # ALL_SERVICES="ranger-base,ranger,postgres,ranger-usersync,hadoop,hive,hbase,knox,kms,tagsync,kafka"
-ALL_SERVICES="ranger-base,ranger,postgres,ranger-usersync,kms,tagsync"
+#ALL_SERVICES="ranger-base,ranger,postgres,ranger-usersync,kms,tagsync"
+ALL_SERVICES="ranger-base,ranger,postgres"
 COMPOSE_FILES=""
 
 if [ "${REMOTE_JVM_DEBUG}" == "true" ]
@@ -61,7 +62,8 @@ if [[ ! " ${valid_actions[@]} " =~ " ${DOCKER_ACTION} " ]]; then
 fi
 
 if [ "${DOCKER_ACTION}" == "rebuild" ]; then
-  DOCKER_ACTION="up -d --no-deps --force-recreate --build ranger ranger-usersync ranger-kms ranger-tagsync"
+  # DOCKER_ACTION="up -d --no-deps --force-recreate --build ranger ranger-usersync ranger-kms ranger-tagsync"
+  DOCKER_ACTION="up -d --no-deps --force-recreate --build ranger"
 #  DOCKER_ACTION="up -d --no-deps --force-recreate --build ranger-tagsync"
 
   cp -v target/ranger-* dev-support/ranger-docker/dist/

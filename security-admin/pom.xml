@@ -797,11 +797,14 @@
             <artifactId>hbase-shaded-protobuf</artifactId>
             <version>${hbase-shaded-protobuf}</version>
         </dependency>
+        <!-- This dependency has a vulnerability because it has into it netty-handler 4.1.114-Final (fixed in 118)
+             Last version of hbase-shaded-netty does not yupdate more than 114. This library is used to communicate with HBase
+             If this communication is needed, this dependency must be added (check if there is a new version)
         <dependency>
             <groupId>org.apache.hbase.thirdparty</groupId>
             <artifactId>hbase-shaded-netty</artifactId>
             <version>${hbase-shaded-netty}</version>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.apache.hbase.thirdparty</groupId>
             <artifactId>hbase-shaded-miscellaneous</artifactId>
@@ -1010,27 +1013,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.webcohesion.enunciate</groupId>
-                <artifactId>enunciate-maven-plugin</artifactId>
-                <configuration>
-                    <configFile>${basedir}/../enunciate.xml</configFile>
-                    <docsDir>${basedir}/../docs/target/</docsDir>
-                </configuration>
-                <dependencies>
-                    <!-- dependency management version doesn't apply here, need to repeat the version numbers -->
-<!--                    <dependency>-->
-<!--                        <groupId>javax.xml.bind</groupId>-->
-<!--                        <artifactId>jaxb-api</artifactId>-->
-<!--                        <version>${jaxb.api.version}</version>-->
-<!--                    </dependency>-->
-<!--                    <dependency>-->
-<!--                        <groupId>javax.jws</groupId>-->
-<!--                        <artifactId>javax.jws-api</artifactId>-->
-<!--                        <version>1.1</version>-->
-<!--                    </dependency>-->
-                </dependencies>
             </plugin>
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>

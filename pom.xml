@@ -129,7 +129,7 @@
         <orc.version>1.5.8</orc.version>
         <aircompressor.version>0.27</aircompressor.version>
         <hbase-shaded-protobuf>4.1.7</hbase-shaded-protobuf>
-        <hbase-shaded-netty>4.1.7</hbase-shaded-netty>
+        <hbase-shaded-netty>4.1.10</hbase-shaded-netty>
         <hbase-shaded-miscellaneous>4.1.7</hbase-shaded-miscellaneous>
         <libthrift.version>0.14.0</libthrift.version>
         <htrace-core.version>4.1.0-incubating</htrace-core.version>
@@ -205,7 +205,7 @@
         <solr.version>8.11.3</solr.version>
         <spring-ldap-core.version>2.4.1</spring-ldap-core.version>
         <springframework.version>6.0.23</springframework.version>
-        <springframework.security.version>6.2.8</springframework.security.version>
+        <springframework.security.version>6.3.8</springframework.security.version>
         <springframework.test.version>6.0.0</springframework.test.version>
         <sqoop.version>1.99.7</sqoop.version>
         <storm.version>1.2.4</storm.version>
@@ -276,59 +276,15 @@
                 <module>agents-audit</module>
                 <module>agents-common</module>
                 <module>agents-cred</module>
-                <module>intg</module>
-                <module>agents-installer</module>
                 <module>credentialbuilder</module>
                 <module>embeddedwebserver</module>
-		<module>ranger-common-ha</module>
-                <module>kms</module>
-                <module>hbase-agent</module>
-                <module>hdfs-agent</module>
                 <module>hive-agent</module>
-                <module>knox-agent</module>
                 <module>storm-agent</module>
-                <module>plugin-yarn</module>
-                <module>plugin-ozone</module>
                 <module>security-admin</module>
-                <module>plugin-kafka</module>
-                <module>plugin-solr</module>
-                <module>plugin-nestedstructure</module>
-                <module>plugin-nifi</module>
-                <module>plugin-nifi-registry</module>
-                <module>plugin-presto</module>
-                <module>plugin-kudu</module>
                 <module>ugsync-util</module>
-                <module>ugsync</module>
-                <module>ugsync/ldapconfigchecktool/ldapconfigcheck</module>
                 <module>unixauthclient</module>
-                <module>unixauthservice</module>
                 <module>ranger-util</module>
-                <module>plugin-kms</module>
-                <module>tagsync</module>
-                <module>ranger-hdfs-plugin-shim</module>
                 <module>ranger-plugin-classloader</module>
-                <module>ranger-hive-plugin-shim</module>
-                <module>ranger-hbase-plugin-shim</module>
-                <module>ranger-knox-plugin-shim</module>
-                <module>ranger-yarn-plugin-shim</module>
-                <module>ranger-ozone-plugin-shim</module>
-                <module>ranger-storm-plugin-shim</module>
-                <module>ranger-kafka-plugin-shim</module>
-                <module>ranger-solr-plugin-shim</module>
-                <module>ranger-atlas-plugin-shim</module>
-                <module>ranger-kms-plugin-shim</module>
-                <module>ranger-presto-plugin-shim</module>
-                <module>ranger-examples</module>
-                <module>ranger-tools</module>
-                <module>plugin-atlas</module>
-                <module>plugin-schema-registry</module>
-                <module>plugin-sqoop</module>
-                <module>ranger-sqoop-plugin-shim</module>
-                <module>plugin-kylin</module>
-                <module>ranger-kylin-plugin-shim</module>
-                <module>plugin-elasticsearch</module>
-                <module>ranger-elasticsearch-plugin-shim</module>
-                <module>plugin-trino</module>
                 <!--
                    'distro' should be the last module. If a module gets inserted after
                    ranger-elasticsearch-plugin-shim, make sure to update dependency in distro/pom.xml
@@ -346,73 +302,20 @@
                 <module>agents-audit</module>
                 <module>agents-common</module>
                 <module>agents-cred</module>
-                <module>intg</module>
-                <module>agents-installer</module>
                 <module>credentialbuilder</module>
                 <module>embeddedwebserver</module>
-                <module>ranger-common-ha</module>
-                <module>kms</module>
-                <module>hbase-agent</module>
-                <module>hdfs-agent</module>
                 <module>hive-agent</module>
-                <module>knox-agent</module>
                 <module>storm-agent</module>
-                <module>plugin-yarn</module>
-                <module>plugin-ozone</module>
                 <module>security-admin</module>
-                <module>plugin-kafka</module>
-                <module>plugin-solr</module>
-                <module>plugin-nestedstructure</module>
-                <module>plugin-nifi</module>
-                <module>plugin-nifi-registry</module>
-                <module>plugin-presto</module>
-                <module>plugin-kudu</module>
                 <module>ugsync-util</module>
-                <module>ugsync</module>
-                <module>ugsync/ldapconfigchecktool/ldapconfigcheck</module>
                 <module>unixauthclient</module>
-                <module>unixauthservice</module>
                 <module>ranger-util</module>
-                <module>plugin-kms</module>
-                <module>tagsync</module>
-                <module>ranger-hdfs-plugin-shim</module>
                 <module>ranger-plugin-classloader</module>
-                <module>ranger-hive-plugin-shim</module>
-                <module>ranger-hbase-plugin-shim</module>
-                <module>ranger-knox-plugin-shim</module>
-                <module>ranger-yarn-plugin-shim</module>
-                <module>ranger-ozone-plugin-shim</module>
-                <module>ranger-storm-plugin-shim</module>
-                <module>ranger-kafka-plugin-shim</module>
-                <module>ranger-solr-plugin-shim</module>
-                <module>ranger-atlas-plugin-shim</module>
-                <module>ranger-kms-plugin-shim</module>
-                <module>ranger-presto-plugin-shim</module>
-                <module>ranger-examples</module>
-                <module>ranger-tools</module>
-                <module>plugin-atlas</module>
-                <module>plugin-schema-registry</module>
-                <module>plugin-sqoop</module>
-                <module>ranger-sqoop-plugin-shim</module>
-                <module>plugin-kylin</module>
-                <module>ranger-kylin-plugin-shim</module>
-                <module>plugin-elasticsearch</module>
-                <module>ranger-elasticsearch-plugin-shim</module>
-                <module>plugin-trino</module>
                 <!--
                    'distro' should be the last module. If a module gets inserted after
                    ranger-elasticsearch-plugin-shim, make sure to update dependency in distro/pom.xml
                 -->
                 <module>distro</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-examples</id>
-            <modules>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>intg</module>
-                <module>ranger-examples</module>
             </modules>
         </profile>
         <profile>
@@ -426,251 +329,10 @@
                 <module>security-admin</module>
                 <module>embeddedwebserver</module>
                 <module>ugsync-util</module>
-                <module>ugsync</module>
-                <module>ugsync/ldapconfigchecktool/ldapconfigcheck</module>
                 <module>unixauthclient</module>
-                <module>unixauthservice</module>
                 <module>ranger-util</module>
-                <module>tagsync</module>
                 <module>jisql</module>
-                <module>plugin-elasticsearch</module>
-                <module>ranger-elasticsearch-plugin-shim</module>
                 <module>distro</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-hdfs-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>hdfs-agent</module>
-                <module>ranger-hdfs-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-hive-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>hive-agent</module>
-                <module>ranger-hive-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-hbase-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>hbase-agent</module>
-                <module>ranger-hbase-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-knox-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>knox-agent</module>
-                <module>ranger-knox-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-storm-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>storm-agent</module>
-                <module>ranger-storm-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-yarn-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-yarn</module>
-                <module>ranger-yarn-plugin-shim</module>
-            </modules>
-        </profile>
-    <profile>
-            <id>ranger-ozone-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-ozone</module>
-                <module>ranger-ozone-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-kafka-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-kafka</module>
-                <module>ranger-kafka-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-solr-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-solr</module>
-                <module>ranger-solr-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-kms-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-kms</module>
-                <module>ranger-kms-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-atlas-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-atlas</module>
-                <module>ranger-atlas-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-sqoop-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-sqoop</module>
-                <module>ranger-sqoop-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-kylin-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-kylin</module>
-                <module>ranger-kylin-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-elasticsearch-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-elasticsearch</module>
-                <module>ranger-elasticsearch-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-presto-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-presto</module>
-                <module>ranger-presto-plugin-shim</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-trino-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-plugin-classloader</module>
-                <module>ranger-util</module>
-                <module>plugin-trino</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>ranger-nestedstructure-plugin</id>
-            <modules>
-                <module>agents-audit</module>
-                <module>agents-common</module>
-                <module>agents-cred</module>
-                <module>agents-installer</module>
-                <module>credentialbuilder</module>
-                <module>ranger-util</module>
-                <module>plugin-nestedstructure</module>
             </modules>
         </profile>
         <profile>
@@ -685,80 +347,22 @@
                 <module>agents-audit</module>
                 <module>agents-common</module>
                 <module>agents-cred</module>
-                <module>intg</module>
-                <module>agents-installer</module>
                 <module>credentialbuilder</module>
                 <module>embeddedwebserver</module>
-		<module>ranger-common-ha</module>
-                <module>kms</module>
-                <module>hbase-agent</module>
-                <module>hdfs-agent</module>
                 <module>hive-agent</module>
-                <module>knox-agent</module>
                 <module>storm-agent</module>
-                <module>plugin-yarn</module>
-                <module>plugin-ozone</module>
                 <module>security-admin</module>
-                <module>plugin-kafka</module>
-                <module>plugin-solr</module>
-                <module>plugin-nifi</module>
-                <module>plugin-nifi-registry</module>
-                <module>plugin-kudu</module>
                 <module>ugsync-util</module>
-                <module>ugsync</module>
-                <module>ugsync/ldapconfigchecktool/ldapconfigcheck</module>
                 <module>unixauthclient</module>
-                <module>unixauthservice</module>
-                <module>unixauthnative</module>
                 <module>ranger-util</module>
-                <module>plugin-kms</module>
-                <module>tagsync</module>
-                <module>ranger-hdfs-plugin-shim</module>
                 <module>ranger-plugin-classloader</module>
-                <module>ranger-hive-plugin-shim</module>
-                <module>ranger-hbase-plugin-shim</module>
-                <module>ranger-knox-plugin-shim</module>
-                <module>ranger-yarn-plugin-shim</module>
-                <module>ranger-ozone-plugin-shim</module>
-                <module>ranger-storm-plugin-shim</module>
-                <module>ranger-kafka-plugin-shim</module>
-                <module>ranger-solr-plugin-shim</module>
-                <module>ranger-atlas-plugin-shim</module>
-                <module>ranger-kms-plugin-shim</module>
-                <module>ranger-examples</module>
-                <module>ranger-tools</module>
-                <module>plugin-atlas</module>
-                <module>plugin-schema-registry</module>
-                <module>plugin-sqoop</module>
-                <module>ranger-sqoop-plugin-shim</module>
-                <module>plugin-kylin</module>
-                <module>ranger-kylin-plugin-shim</module>
-                <module>plugin-presto</module>
-                <module>ranger-presto-plugin-shim</module>
-                <module>plugin-elasticsearch</module>
-                <module>ranger-elasticsearch-plugin-shim</module>
                 <module>ranger-authn</module>
                 <module>ranger-metrics</module>
-                <module>plugin-trino</module>
                 <!--
                    'distro' should be the last module. If a module gets inserted after
                    ranger-elasticsearch-plugin-shim, make sure to update dependency in distro/pom.xml
                 -->
                 <module>distro</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>linux-pam</id>
-            <activation>
-                <os>
-                    <family>linux</family>
-                </os>
-                <file>
-                    <exists>/usr/include/security/pam_appl.h</exists>
-                </file>
-            </activation>
-            <modules>
-                <module>unixauthpam</module>
             </modules>
         </profile>
         <profile>
@@ -774,57 +378,15 @@
                 <module>agents-audit</module>
                 <module>agents-common</module>
                 <module>agents-cred</module>
-                <module>intg</module>
-                <module>agents-installer</module>
                 <module>credentialbuilder</module>
                 <module>embeddedwebserver</module>
-		<module>ranger-common-ha</module>
-                <module>kms</module>
-                <module>hbase-agent</module>
-                <module>hdfs-agent</module>
                 <module>hive-agent</module>
-                <module>knox-agent</module>
                 <module>storm-agent</module>
-                <module>plugin-yarn</module>
-                <module>plugin-ozone</module>
                 <module>security-admin</module>
-                <module>plugin-kafka</module>
-                <module>plugin-solr</module>
-                <module>plugin-nifi</module>
-                <module>plugin-nifi-registry</module>
-                <module>plugin-presto</module>
                 <module>ugsync-util</module>
-                <module>ugsync</module>
-                <module>ugsync/ldapconfigchecktool/ldapconfigcheck</module>
                 <module>unixauthclient</module>
-                <module>unixauthservice</module>
                 <module>ranger-util</module>
-                <module>plugin-kms</module>
-                <module>tagsync</module>
-                <module>ranger-hdfs-plugin-shim</module>
                 <module>ranger-plugin-classloader</module>
-                <module>ranger-hive-plugin-shim</module>
-                <module>ranger-hbase-plugin-shim</module>
-                <module>ranger-knox-plugin-shim</module>
-                <module>ranger-yarn-plugin-shim</module>
-                <module>ranger-ozone-plugin-shim</module>
-                <module>ranger-storm-plugin-shim</module>
-                <module>ranger-kafka-plugin-shim</module>
-                <module>ranger-solr-plugin-shim</module>
-                <module>ranger-atlas-plugin-shim</module>
-                <module>ranger-kms-plugin-shim</module>
-                <module>ranger-presto-plugin-shim</module>
-                <module>ranger-examples</module>
-                <module>ranger-tools</module>
-                <module>plugin-atlas</module>
-                <module>plugin-schema-registry</module>
-                <module>plugin-sqoop</module>
-                <module>ranger-sqoop-plugin-shim</module>
-                <module>plugin-kylin</module>
-                <module>ranger-kylin-plugin-shim</module>
-                <module>plugin-elasticsearch</module>
-                <module>ranger-elasticsearch-plugin-shim</module>
-                <module>plugin-trino</module>
             </modules>
             <build>
                 <plugins>
