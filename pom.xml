@@ -128,10 +128,10 @@
         <hive.storage-api.version>2.7.2</hive.storage-api.version>
         <orc.version>1.5.8</orc.version>
         <aircompressor.version>0.27</aircompressor.version>
-        <hbase-shaded-protobuf>4.1.7</hbase-shaded-protobuf>
+        <hbase-shaded-protobuf>4.1.9</hbase-shaded-protobuf>
         <hbase-shaded-netty>4.1.10</hbase-shaded-netty>
         <hbase-shaded-miscellaneous>4.1.7</hbase-shaded-miscellaneous>
-        <libthrift.version>0.14.0</libthrift.version>
+        <libthrift.version>0.15.0</libthrift.version>
         <htrace-core.version>4.1.0-incubating</htrace-core.version>
         <httpcomponents.httpclient.version>4.5.13</httpcomponents.httpclient.version>
         <httpcomponents.httpcore.version>4.4.14</httpcomponents.httpcore.version>
@@ -189,7 +189,7 @@
         <paranamer.version>2.3</paranamer.version>
         <presto.version>333</presto.version>
         <trino.version>451</trino.version>
-        <poi.version>5.2.2</poi.version>
+        <poi.version>5.2.5</poi.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <protobuf-java.version>3.25.5</protobuf-java.version>
         <gcp.protobuf-java.version>3.25.5</gcp.protobuf-java.version>
@@ -208,7 +208,7 @@
         <springframework.security.version>6.3.8</springframework.security.version>
         <springframework.test.version>6.0.0</springframework.test.version>
         <sqoop.version>1.99.7</sqoop.version>
-        <storm.version>1.2.4</storm.version>
+        <storm.version>2.6.4</storm.version>
         <tomcat.embed.version>10.1.39</tomcat.embed.version>
         <testng.version>7.5.1</testng.version>
         <velocity.version>2.4</velocity.version>
@@ -527,6 +527,10 @@
                     <exclusion>
                         <groupId>com.sun.jersey</groupId>
                         <artifactId>jersey-server</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.zookeeper</groupId>
+                        <artifactId>zookeeper</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
